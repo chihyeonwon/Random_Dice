@@ -33,7 +33,32 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
 }
 
 List<Widget> renderChildren() {
-  return [];
+  return [
+    Container(
+      // 홈 탭
+      child: Center(
+        child: Text(
+          'Tab 1',
+          style: TextStyle(
+            fontSize: 50.0,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    ),
+    Container(
+      // 설정 탭
+      child: Center(
+        child: Text(
+          'Tab 2',
+          style: TextStyle(
+            fontSize: 50.0,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    ),
+  ];
 }
 
 BottomNavigationBar renderBottomNavigation() {
