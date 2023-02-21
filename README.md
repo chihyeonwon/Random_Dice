@@ -44,3 +44,15 @@ length 매개변수의 2는 탭의 개수를 의미합니다.
 ![image](https://user-images.githubusercontent.com/58906858/220254350-001c88da-3ec9-4db0-8431-762690e92d39.png)   
 ![image](https://user-images.githubusercontent.com/58906858/220254392-452c63cd-659b-4f2e-9b5e-2e122fcde18f.png)
 
+
+## TabBarView UI 설정
+```
+TabBarView가 잘 작동하는 지 알아보기 위해 Widget List에 텍스트 2개를 각각 넣고 좌우로 슬라이드하여
+잘 작동하는 것을 확인하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220254856-36b435c2-f137-445d-9b8d-b83d89ae74d6.png)   
+![image](https://user-images.githubusercontent.com/58906858/220254880-29dd274c-4146-4448-83da-da21f22c8eb4.png)
+### [왼쪽으로 슬라이드했을 때]
+![image](https://user-images.githubusercontent.com/58906858/220254913-df569920-9028-4bf3-878b-152fe0c496f5.png)
+
+
