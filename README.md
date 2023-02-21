@@ -1,2 +1,21 @@
 # Random_Dice
-Flutter Digital Random Dice Project
+
+```
+개발 툴 : Flutter
+개발 언어 : Dart
+개발 일시 : 2023-02-21
+개발자 : Won Chi Hyeon
+```
+
+## 앱 개요
+```
+기능 : 2개의 BottomNavigation을 가지는 탭 형태의 UI
+       가속도계를 사용해서 흔들기 기능을 구현
+       Slider를 이용해서 흔들기 민감도를 설정하는 기능 구현
+
+조작법 : 첫 번째 탭에서 핸드폰을 흔들면 주사위의 숫자가 랜덤하게 바뀝니다.
+         두 번째 탭에서 슬라이더를 움직이면 흔들기의 민감도를 정할 수 있습니다.
+
+사용한 플러그인 : shake, sensors_plus
+```
+
