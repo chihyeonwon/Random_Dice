@@ -26,3 +26,10 @@
 ```
 ![image](https://user-images.githubusercontent.com/58906858/220250888-223ae87e-e109-4548-bc09-d711bdfb09b2.png)
 
+## TabBarView 작업하기
+```
+TabBarView 위젯은 TabController가 필수입니다. TabController는 한 번만 초기화되어야 하므로
+initState안에서 초기화해주고 초기화할 때는 vsync 기능이 필수인데 이는 State위젯에 TickerProviderMixin을 mixin으로 제공해주어야만
+사용가능합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220253253-06e2f0b7-fdcf-4665-ac40-9133f8c6826b.png)
