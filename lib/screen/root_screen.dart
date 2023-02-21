@@ -9,6 +9,8 @@ class RootSreen extends StatelessWidget {
       body:TabBarView( // 탭 화면을 보여줄 위젯
         children:renderChildren(),
       ),
+
+      bottomNavigationBar: renderBottomNavigation(),
     );
   }
 }
@@ -16,4 +18,9 @@ class RootSreen extends StatelessWidget {
 
 List<Widget> renderChildren() {
   return [];
+}
+
+BottomNavigationBar renderBottomNavigation() {
+  // 탭 내비게이션을 구현하는 위젯
+  return BottomNavigationBar(items:[]);
 }
