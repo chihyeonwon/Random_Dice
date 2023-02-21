@@ -36,3 +36,11 @@ TickerProviderMixin와 SingleTrickerProviderMixin은 애니메이션의 효율�
 length 매개변수의 2는 탭의 개수를 의미합니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/220253253-06e2f0b7-fdcf-4665-ac40-9133f8c6826b.png)
+
+## BottomNavigationBar 작업하기
+```
+하단 탭바의 2개의 버튼을 각각 구현하였습니다. label과 icon을 주어서 UI를 구성하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220254350-001c88da-3ec9-4db0-8431-762690e92d39.png)   
+![image](https://user-images.githubusercontent.com/58906858/220254392-452c63cd-659b-4f2e-9b5e-2e122fcde18f.png)
+
