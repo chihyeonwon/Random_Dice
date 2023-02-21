@@ -19,3 +19,10 @@
 사용한 플러그인 : shake, sensors_plus
 ```
 
+## Theme 설정하기
+```
+만난 지 며칠 프로젝트 앱에서 폰트와 폰트색상 등 테마를 설정해주었던 것처럼 상수를 이용해서
+슬라이더, BottomNavigation 위젯 등에 테마를 미리 설정하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220250888-223ae87e-e109-4548-bc09-d711bdfb09b2.png)
+
