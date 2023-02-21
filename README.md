@@ -31,5 +31,8 @@
 TabBarView 위젯은 TabController가 필수입니다. TabController는 한 번만 초기화되어야 하므로
 initState안에서 초기화해주고 초기화할 때는 vsync 기능이 필수인데 이는 State위젯에 TickerProviderMixin을 mixin으로 제공해주어야만
 사용가능합니다.
+
+TickerProviderMixin와 SingleTrickerProviderMixin은 애니메이션의 효율을 올려주는 역할을 합니다.
+length 매개변수의 2는 탭의 개수를 의미합니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/220253253-06e2f0b7-fdcf-4665-ac40-9133f8c6826b.png)
