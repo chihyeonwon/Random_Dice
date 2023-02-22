@@ -3,7 +3,7 @@
 ```
 개발 툴 : Flutter
 개발 언어 : Dart
-개발 일시 : 2023-02-21
+개발 일시 : 2023-02-21 ~ 2023-02-22
 개발자 : Won Chi Hyeon
 ```
 
@@ -18,6 +18,12 @@
 
 사용한 플러그인 : shake, sensors_plus
 ```
+
+### 최종 화면
+![image](https://user-images.githubusercontent.com/58906858/220520031-3745bb6d-f42b-4ad9-a251-80cce259e5bc.png)
+![image](https://user-images.githubusercontent.com/58906858/220520000-f83a16ed-da73-4178-9ed2-88e0a3bc5799.png)
+![image](https://user-images.githubusercontent.com/58906858/220520057-226b6452-cbe2-4217-a06e-be93af1c170e.png)
+
 
 ## Theme 설정하기
 ```
