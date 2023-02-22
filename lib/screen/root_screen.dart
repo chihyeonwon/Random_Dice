@@ -11,12 +11,19 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   // TickerProviderStateMaxin 사용하기
 
   TabController? controller; // 사용할 TabController 선언
+  
+  tabListener() { // 리스너로 사용할 함수
+    setState(() {});
+  }
 
   @override
   void initState() {
     super.initState();
 
     controller = TabController(length: 2, vsync: this); // 컨트롤러 초기화하기
+
+    // 컨트롤러 속성이 변경될 때마다 실행할 함수 등록
+    controller!.addListener(tabListener);
   }
 
   @override
