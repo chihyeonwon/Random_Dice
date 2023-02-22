@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  final int number;
+
+  const HomeScreen({
+    required this.number,
+    Key? key
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        // 주사위 이미지
+        Center(
+          child:Image.asset('asset/img/$number.png'),
+        ),
+      ]
+
+
+    );
   }
 }
