@@ -98,3 +98,13 @@ TabController을 연동하여 BottomNavigationBar를 눌러도 화면전환이 �
 ![image](https://user-images.githubusercontent.com/58906858/220516609-7c3a21d3-7529-465b-84b1-80413c29f8ea.png)   
 ![image](https://user-images.githubusercontent.com/58906858/220516836-b2ebc837-b24c-47a4-b247-fa63c29a6561.png)
 ```
+
+## 흔들기를 감지하여 주사위 번호를 변경하기
+```
+주사위 번호(number)를 상태관리를 하기위해서 선언을 해준다음 setState를 사용하여
+흔들기가 감지되었을 때 number를 rand().nextInt + 1 (0~6까지의 난수)로 변경하도록 하여
+최종적으로 주사위 번호를 변경과 더불어 주사위에 해당하는 이미지로 수정하도록 하는 기능을 추가하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220519032-dcc78fcd-de89-415e-a4d6-08d1bb920b41.png)
+![image](https://user-images.githubusercontent.com/58906858/220518998-cc443cc2-cfc8-4461-acf6-7703207b6df0.png)
+
