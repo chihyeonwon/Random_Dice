@@ -11,8 +11,9 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   // TickerProviderStateMaxin 사용하기
 
   TabController? controller; // 사용할 TabController 선언
-  
-  tabListener() { // 리스너로 사용할 함수
+
+  tabListener() {
+    // 리스너로 사용할 함수
     setState(() {});
   }
 
@@ -25,13 +26,60 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
     // 컨트롤러 속성이 변경될 때마다 실행할 함수 등록
     controller!.addListener(tabListener);
   }
-  
+
   @override
   void dispose() {
     controller!.removeListener(tabListener); // 리스너에 등록한 함수 등록 취소
     super.dispose();
   }
-  
+
+  List<Widget> renderChildren() {
+    return [
+      Container(
+        // 홈 탭
+        child: Center(
+          child: Text(
+            'Tab 1',
+            style: TextStyle(
+              fontSize: 50.0,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+      Container(
+        // 설정 탭
+        child: Center(
+          child: Text(
+            'Tab 2',
+            style: TextStyle(
+              fontSize: 50.0,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    ];
+  }
+
+  BottomNavigationBar renderBottomNavigation() {
+    // 탭 내비게이션을 구현하는 위젯
+    return BottomNavigationBar(items: [
+      BottomNavigationBarItem(
+        icon: Icon(
+          Icons.edgesensor_high_outlined,
+        ),
+        label: '주사위',
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(
+          Icons.settings,
+        ),
+        label: '설정',
+      ),
+    ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,51 +91,4 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
       bottomNavigationBar: renderBottomNavigation(),
     );
   }
-}
-
-List<Widget> renderChildren() {
-  return [
-    Container(
-      // 홈 탭
-      child: Center(
-        child: Text(
-          'Tab 1',
-          style: TextStyle(
-            fontSize: 50.0,
-            color: Colors.white,
-          ),
-        ),
-      ),
-    ),
-    Container(
-      // 설정 탭
-      child: Center(
-        child: Text(
-          'Tab 2',
-          style: TextStyle(
-            fontSize: 50.0,
-            color: Colors.white,
-          ),
-        ),
-      ),
-    ),
-  ];
-}
-
-BottomNavigationBar renderBottomNavigation() {
-  // 탭 내비게이션을 구현하는 위젯
-  return BottomNavigationBar(items: [
-    BottomNavigationBarItem(
-      icon: Icon(
-        Icons.edgesensor_high_outlined,
-      ),
-      label: '주사위',
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(
-        Icons.settings,
-      ),
-      label: '설정',
-    ),
-  ]);
 }
