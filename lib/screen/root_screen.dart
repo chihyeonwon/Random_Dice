@@ -25,7 +25,13 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
     // 컨트롤러 속성이 변경될 때마다 실행할 함수 등록
     controller!.addListener(tabListener);
   }
-
+  
+  @override
+  void dispose() {
+    controller!.removeListener(tabListener); // 리스너에 등록한 함수 등록 취소
+    super.dispose();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
