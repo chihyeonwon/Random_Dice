@@ -55,4 +55,19 @@ TabBarView가 잘 작동하는 지 알아보기 위해 Widget List에 텍스트 
 ### [왼쪽으로 슬라이드했을 때]
 ![image](https://user-images.githubusercontent.com/58906858/220254913-df569920-9028-4bf3-878b-152fe0c496f5.png)
 
+## BottomNavigationBar와 controller 연동
+```
+TabBarView를 스와이프할 때는 화면 전환이 이루어지지만 BottomNavigationBar의 탭을 누르면 이동되지 않습니다.
+그 이유는 BottomNavigationBar를 누를 때마다 TabBaraView와 연동을 해야 하기 때문입니다.
+
+TabController을 연동하여 BottomNavigationBar를 눌러도 화면전환이 잘 이루어지도록 하였습니다.
+```
+### [컨트롤러 속성이 변경될 때마다 실행할 함수]
+![image](https://user-images.githubusercontent.com/58906858/220511478-f7fd4435-3d62-4735-bb59-9f5a23ea668e.png)
+
+### [위젯이 삭제될 때 등록된 listener도 삭제]
+![image](https://user-images.githubusercontent.com/58906858/220511442-c396d152-1f07-4021-a610-f56a771d7b5d.png)
+
+### [현재 선택된 상태로 표시해야 되는 BottomNavigationBarItem의 인덱스]
+![image](https://user-images.githubusercontent.com/58906858/220511411-d0998b81-6cc2-499a-bcdd-4e32db556aaf.png)
 
