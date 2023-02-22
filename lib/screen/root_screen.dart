@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:random_dice/screen/home_screen.dart';
+import 'package:random_dice/screen/setting_screen.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({Key? key}) : super(key: key);
@@ -10,6 +11,13 @@ class RootScreen extends StatefulWidget {
 
 class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   // TickerProviderStateMaxin 사용하기
+  double threshold = 2.7; // 민감도의 기본값 설정
+
+  void onThresholdChange(double val) { // 슬라이더값 변경 시 실행 함수
+    setState(() {
+      threshold = val; // 변경된 값을 민감도로 설정
+    });
+  }
 
   TabController? controller; // 사용할 TabController 선언
 
@@ -37,17 +45,9 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   List<Widget> renderChildren() {
     return [
       HomeScreen(number: 1),
-      Container(
-        // 설정 탭
-        child: Center(
-          child: Text(
-            'Tab 2',
-            style: TextStyle(
-              fontSize: 50.0,
-              color: Colors.white,
-            ),
-          ),
-        ),
+      SettingScreen(
+        threshold: threshold,
+        onThresholdChange:onThresholdChange,
       ),
     ];
   }
