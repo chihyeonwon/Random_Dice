@@ -64,20 +64,28 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
 
   BottomNavigationBar renderBottomNavigation() {
     // 탭 내비게이션을 구현하는 위젯
-    return BottomNavigationBar(items: [
-      BottomNavigationBarItem(
-        icon: Icon(
-          Icons.edgesensor_high_outlined,
-        ),
-        label: '주사위',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(
-          Icons.settings,
-        ),
-        label: '설정',
-      ),
-    ]);
+    return BottomNavigationBar(
+        // 현재 화면에 렌더링되는 탭의 인덱스
+        currentIndex: controller!.index,
+        onTap: (int index) { // 탭이 선택될 때마다 실행되는 함수
+          setState(() {
+            controller!.animateTo(index);
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.edgesensor_high_outlined,
+            ),
+            label: '주사위',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+            ),
+            label: '설정',
+          ),
+        ]);
   }
 
   @override
