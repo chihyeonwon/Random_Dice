@@ -27,8 +27,19 @@ class HomeScreen extends StatelessWidget {
             color:primaryColor,
             fontSize:20.0,
             fontWeight:FontWeight.w700,
-          )
-        )
+          ),
+        ),
+        SizedBox(
+          height: 12.0,
+        ),
+        Text(
+          number.toString(), // 주사위 값에 해당되는 숫자
+          style:TextStyle(
+            color:primaryColor,
+            fontSize:60.0,
+            fontWeight: FontWeight.w200,
+          ),
+        ),
       ],
     );
   }
