@@ -16,7 +16,10 @@ class HomeScreen extends StatelessWidget {
       children:[
         // 주사위 이미지
         Center(
-          child:Image.asset('asset/img/$number.png'),
+          child:Image.asset('asset/img/$number.png',
+            width: MediaQuery.of(context).size.height/2,
+            height: MediaQuery.of(context).size.width/2,
+          ),
         ),
         SizedBox(
           height:32.0,
