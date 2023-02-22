@@ -79,3 +79,10 @@ TabController을 연동하여 BottomNavigationBar를 눌러도 화면전환이 �
 ![image](https://user-images.githubusercontent.com/58906858/220512873-096e3da0-0875-4d2e-bdf4-edf1b16e3c0e.png)   
 ![image](https://user-images.githubusercontent.com/58906858/220512929-efcb8df4-82e9-4176-8ace-f0ecba4fc2da.png)   
 ![image](https://user-images.githubusercontent.com/58906858/220512856-2f462200-d888-440e-a698-4093e74a93c6.png)
+
+## 주사위 값에 해당되는 숫자 텍스트 추가
+```
+주사위 값에 해당되는 숫자(number) 텍스트를 주사위 이미지 하단에 추가하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220513717-55a51d8d-84d6-4d1a-a538-cebce7790af0.png)   
+![image](https://user-images.githubusercontent.com/58906858/220513730-d056e896-38a4-4baf-ac84-f576ef636219.png)
