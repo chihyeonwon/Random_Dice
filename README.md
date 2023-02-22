@@ -86,3 +86,15 @@ TabController을 연동하여 BottomNavigationBar를 눌러도 화면전환이 �
 ```
 ![image](https://user-images.githubusercontent.com/58906858/220513717-55a51d8d-84d6-4d1a-a538-cebce7790af0.png)   
 ![image](https://user-images.githubusercontent.com/58906858/220513730-d056e896-38a4-4baf-ac84-f576ef636219.png)
+
+## 두 번째 인덱스 화면에 민감도 조절 슬라이더 추가
+```
+두 번째 인덱스 화면(SettingScreen)에 슬라이더를 추가하였습니다.
+슬라이더의 주요 설정값은 threshold(민감도)로 기본 민감도 값과 슬라이더가 변경될 때마다 실행되는 함수를 생성자로 등록하였습니다.
+슬라이더가 변경될 때마다 실행되는 함수는 변경된 값을 민감도 값으로 변경해주는 역할을 합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220516679-d26272b4-89e3-4b7b-9e7c-d69238501bb6.png)   
+![image](https://user-images.githubusercontent.com/58906858/220516765-74e784bb-97f6-4013-ad6b-6eefc64ed419.png)   
+![image](https://user-images.githubusercontent.com/58906858/220516609-7c3a21d3-7529-465b-84b1-80413c29f8ea.png)   
+![image](https://user-images.githubusercontent.com/58906858/220516836-b2ebc837-b24c-47a4-b247-fa63c29a6561.png)
+```
