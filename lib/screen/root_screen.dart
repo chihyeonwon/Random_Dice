@@ -15,8 +15,10 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   // TickerProviderStateMaxin 사용하기
   double threshold = 2.7; // 민감도의 기본값 설정
   int number = 1; // 주사위 숫자
+  ShakeDetector? shakeDetector;
 
-  void onThresholdChange(double val) { // 슬라이더값 변경 시 실행 함수
+  void onThresholdChange(double val) {
+    // 슬라이더값 변경 시 실행 함수
     setState(() {
       threshold = val; // 변경된 값을 민감도로 설정
     });
@@ -29,6 +31,16 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
     setState(() {});
   }
 
+  void onPhoneShake() { // 감지 후 실행할 함수
+    final rand = new Random();
+
+    setState(
+        (){
+          number = rand.nextInt(5) + 1;
+        }
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -37,11 +49,18 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
 
     // 컨트롤러 속성이 변경될 때마다 실행할 함수 등록
     controller!.addListener(tabListener);
+
+    shakeDetector = ShakeDetector.autoStart( // 흔들기 감지 즉시 시작
+        shakeSlopTimeMS: 100, // 감지 주기
+        shakeThresholdGravity: threshold, // 감지 민감도
+        onPhoneShake: onPhoneShake, // 감지 후 실행할 함수
+    );
   }
 
   @override
   void dispose() {
     controller!.removeListener(tabListener); // 리스너에 등록한 함수 등록 취소
+    shakeDetector!.stopListening(); // 흔들기 감지 중지
     super.dispose();
   }
 
@@ -50,7 +69,7 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
       HomeScreen(number: number),
       SettingScreen(
         threshold: threshold,
-        onThresholdChange:onThresholdChange,
+        onThresholdChange: onThresholdChange,
       ),
     ];
   }
@@ -58,7 +77,7 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   BottomNavigationBar renderBottomNavigation() {
     // 탭 내비게이션을 구현하는 위젯
     return BottomNavigationBar(
-        // 현재 화면에 렌더링되는 탭의 인덱스
+      // 현재 화면에 렌더링되는 탭의 인덱스
         currentIndex: controller!.index,
         onTap: (int index) { // 탭이 선택될 때마다 실행되는 함수
           setState(() {
