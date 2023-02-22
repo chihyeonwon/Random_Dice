@@ -12,6 +12,7 @@ class RootScreen extends StatefulWidget {
 class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
   // TickerProviderStateMaxin 사용하기
   double threshold = 2.7; // 민감도의 기본값 설정
+  int number = 1; // 주사위 숫자
 
   void onThresholdChange(double val) { // 슬라이더값 변경 시 실행 함수
     setState(() {
@@ -44,7 +45,7 @@ class _RootScreenState extends State<RootScreen> with TickerProviderStateMixin {
 
   List<Widget> renderChildren() {
     return [
-      HomeScreen(number: 1),
+      HomeScreen(number: number),
       SettingScreen(
         threshold: threshold,
         onThresholdChange:onThresholdChange,
