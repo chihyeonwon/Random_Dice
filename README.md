@@ -71,3 +71,11 @@ TabController을 연동하여 BottomNavigationBar를 눌러도 화면전환이 �
 ### [현재 선택된 상태로 표시해야 되는 BottomNavigationBarItem의 인덱스]
 ![image](https://user-images.githubusercontent.com/58906858/220511411-d0998b81-6cc2-499a-bcdd-4e32db556aaf.png)
 
+## 첫 번째 인덱스화면에 주사위 이미지 추가
+```
+첫 번째 인덱스 화면(HomeScreen)에 주사위 이미지를 추가하였습니다.
+향후에 생성자로 number를 넘겨줘서 이미지를 변경할 수 있도록 설계하였습니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/220512873-096e3da0-0875-4d2e-bdf4-edf1b16e3c0e.png)   
+![image](https://user-images.githubusercontent.com/58906858/220512929-efcb8df4-82e9-4176-8ace-f0ecba4fc2da.png)   
+![image](https://user-images.githubusercontent.com/58906858/220512856-2f462200-d888-440e-a698-4093e74a93c6.png)
