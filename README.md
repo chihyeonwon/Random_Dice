@@ -1,3 +1,8 @@
+## 구글 플레이스토어에서 랜덤 주사위 앱을 다운로드하세요 ! 
+[랜덤 주사위](https://play.google.com/store/apps/details?id=com.wonchihyeon.randomdice)
+![image](https://github.com/chihyeonwon/Random_Dice/assets/58906858/f5082589-a025-4883-8de8-f9ae33e288e9)
+
+
 # Random_Dice
 
 ```
